@@ -1,0 +1,27 @@
+TITLE : "JHMI: Display CWP role"
+
+FCL Manage_Operational_Configuration_3311
+{
+    TITLE : "An operational user can monitor the role allocated to the CWP."
+    SYS_REQUIREMENTS : {
+        OSUP-0652, GHMI-2115
+    }
+    CR_LINKED : {
+        USD220(EUR-MEGENSEL)
+    }
+    OH_REQUIREMENTS : {
+        EUR-MEGENGME-2424, EUR-MEGENGME-0050, EUR-MEGENSEL-1064 , EUR-MEGENSEL-1067
+    }
+}
+
+FCL Manage_Operational_Configuration_3312
+{
+    TITLE : "An operational user can monitor the prepared role when the Operational Configuration Change Preparation is active."
+    SYS_REQUIREMENTS : {
+        GHMI-2113, GHMI-2114
+    }
+    OH_REQUIREMENTS : {
+        EUR-OPCONFCHGPREPWIN-0062, EUR-OPCONFCHGPREPWIN-0063, EUR-MEGENGME-2424
+    }
+}
+

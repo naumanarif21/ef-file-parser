@@ -1,0 +1,92 @@
+TITLE : "JHMI : Display Supervisory window"
+
+FCL Manage_Operational_Configuration_3321
+{
+    TITLE : "An eligible operational user can display the current operational configuration of all QAs of the system."
+    SYS_REQUIREMENTS : {
+        OSUP-0802, OSUP-0803
+    }
+    OH_REQUIREMENTS : {
+        EUR-MEGENAIRS-1085, EUR-MEGENAIRS-1086, EUR-MEGENAIRS-1087, EUR-WISUPUPE-2257, EUR-WISUPUPE-2258, EUR-WISUPUPE-2259, EUR-WISUPUPE-2262 , EUR-WISUPLAYOUT-2265 , EUR-WISUPLAYOUT-2266, EUR-WISUPLAYOUT-2267, EUR-WISUPLAYOUT-0557, EUR-WISUPLAYOUT-0565, EUR-WISUPLAYOUT-0568, EUR-WISUPLAYOUT-0560 , EUR-WISUPLAYOUT-0567
+    }
+}
+
+FCL Manage_Operational_Configuration_3322
+{
+    TITLE : "An eligible operational user can display the current operational configuration of a selected QA at a time."
+    SYS_REQUIREMENTS : {
+        OSUP-0802, OSUP-0803
+    }
+    OH_REQUIREMENTS : {
+        EUR-MEGENAIRS-1085, EUR-MEGENAIRS-1086, EUR-MEGENAIRS-1087, EUR-WISUPUPE-2257, EUR-WISUPUPE-2258, EUR-WISUPUPE-2259, EUR-WISUPUPE-2262 , EUR-WISUPLAYOUT-2265 , EUR-WISUPLAYOUT-2266, EUR-WISUPLAYOUT-2267, EUR-WISUPLAYOUT-0557, EUR-WISUPLAYOUT-0565, EUR-WISUPLAYOUT-0566, EUR-WISUPLAYOUT-0568, EUR-WISUPLAYOUT-0560 , EUR-WISUPLAYOUT-0567
+    }
+}
+
+FCL Manage_Operational_Configuration_3323
+{
+    TITLE : "An eligible operational user can monitor the operational status of each suite of the displayed operational configuration."
+    SYS_REQUIREMENTS : {
+        OSUP-0337, OSUP-0807, OSUP-0802
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0559 , EUR-WISUPLAYOUT-0560
+    }
+}
+
+FCL Manage_Operational_Configuration_3324
+{
+    TITLE : "An eligible operational user can monitor the operational status of each working position of each suite of the displayed operational configuration."
+    SYS_REQUIREMENTS : {
+        OSUP-0339, OSUP-0802
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0559 , EUR-WISUPLAYOUT-0560
+    }
+}
+
+FCL Manage_Operational_Configuration_3325
+{
+    TITLE : "An eligible operational user can monitor the responsibilities or alias of a group of responsibilities allocated to each suite of the displayed operational configuration."
+    SYS_REQUIREMENTS : {
+        OSUP-0336, OSUP-0802
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0556 , EUR-WISUPLAYOUT-0560 , EUR-WISUPLAYOUT-0561
+    }
+}
+
+FCL Manage_Operational_Configuration_3326
+{
+    TITLE : "An eligible operational user can monitor the role allocated to each suite of the displayed operational configuration."
+    SYS_REQUIREMENTS : {
+        OSUP-0802
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0556 , EUR-WISUPLAYOUT-0560 , EUR-WISUPLAYOUT-0561
+    }
+}
+
+FCL Manage_Operational_Configuration_3327
+{
+    TITLE : "An eligible operational user can access to any Free Text set on suites of the displayed operational configuration."
+    DEPENDENT_FUNCTION : "COOP"
+    SYS_REQUIREMENTS : {
+        OSUP-1418
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0556
+    }
+}
+
+FCL Manage_Operational_Configuration_3328
+{
+    TITLE : "An eligible operational user can access to the availability status of all suites of the displayed operational configuration."
+    DEPENDENT_FUNCTION : "COOP"
+    SYS_REQUIREMENTS : {
+        OSUP-1957
+    }
+    OH_REQUIREMENTS : {
+        EUR-WISUPLAYOUT-0560
+    }
+}
+
