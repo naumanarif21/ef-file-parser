@@ -80,4 +80,4 @@ with open(file_path, 'r') as file:
         
         text_without_fclid = entry[entry.find('{'):]
         text_without_fclid = text_without_fclid.replace('\n', '').replace('    ', '')
-        parse_two(text_without_fclid)
+        magic_parser(text_without_fclid)
