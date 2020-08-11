@@ -8,7 +8,8 @@ import pprint
 from pyparsing import (
     Word, Literal, Forward, Group,
     ZeroOrMore, alphas, Suppress, Regex, 
-    OneOrMore, alphanums, printables
+    OneOrMore, alphanums, printables,
+    oneOf
 )
 
 file_path = 'ef_files/1_EXT_Display_operational_configuration.ef'
@@ -36,17 +37,32 @@ def magic_parser(text):
         Use a Grammar Based Parser
         to take out shit
     """
-    print(text[132:])
     EQ, LBRACE, RBRACE = map(Suppress,':{}')
-    name = Word(alphas,alphanums+'_, -".')
+    name = Word(alphas + '_ ')
     value = Forward()
     entry = Group(name + EQ + value)
     
     struct = Group(LBRACE + ZeroOrMore(entry) + RBRACE)
-    value = name | OneOrMore(Group(LBRACE + name + RBRACE))
+    value << (OneOrMore(Word(alphanums + '".,-_')) | OneOrMore(Group(LBRACE + OneOrMore(Word(alphanums + '".,-_')) + RBRACE)))
 
     result = struct.parseString(text)
     pprint.pprint(result)
+
+
+def magic_parser_two(text):
+
+    EQ = ':'
+    LBRACE = '{'
+    RBRACE = '}'
+    key = Word(alphas+'_')
+    value = Forward()
+    value << ((OneOrMore(Word(alphas+'_"., ') | Group(LBRACE + ZeroOrMore(Word(alphas+'_"., ')) + RBRACE))) + "\n")
+    entry = key + EQ + value
+
+    struct = Group(LBRACE + ZeroOrMore(entry) + RBRACE)
+
+    result = struct.parseString(text)
+    print(result)
 
 
 with open(file_path, 'r') as file:
@@ -79,5 +95,5 @@ with open(file_path, 'r') as file:
         FCL_ID = extract_fcid_from_entry(entry)
         
         text_without_fclid = entry[entry.find('{'):]
-        text_without_fclid = text_without_fclid.replace('\n', '').replace('    ', '')
-        magic_parser(text_without_fclid)
+        text_without_fclid = text_without_fclid
+        magic_parser_two(text_without_fclid)
